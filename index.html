@@ -29,7 +29,7 @@
             height: auto;
         }
 
-        #remarkInput {
+        #remarkInput, #remarkInput1, #remarkInput2 , #remarkInput3 {
             width: 100%;
             padding: 5px;
             box-sizing: border-box;
@@ -38,6 +38,7 @@
 </head>
 <body>
     <header>
+        <img src="https://upload.wikimedia.org/wikipedia/en/e/e7/University_of_San_Agustin_Logo.png">
         <h1>USA Emergency Reporting</h1>
     </header>
 
@@ -67,10 +68,10 @@
 
     <div class="box">
         <div>
-            <label for="remarkInput">Enter Remark:</label>
-            <input type="text" id="remarkInput" onkeypress="handleKeyPress(event)">
+            <label for="remarkInput1">Enter Remark:</label>
+            <input type="text" id="remarkInput1" onkeypress="handleKeyPress(event)">
         </div>
-        <p id="remarkText"></p>
+        <p id="remarkText1"></p>
     </div>
 
     <div class="box">
@@ -83,10 +84,10 @@
 
     <div class="box">
         <div>
-            <label for="remarkInput">Enter Remark:</label>
-            <input type="text" id="remarkInput" onkeypress="handleKeyPress(event)">
+            <label for="remarkInput2">Enter Remark:</label>
+            <input type="text" id="remarkInput2" onkeypress="handleKeyPress(event)">
         </div>
-        <p id="remarkText"></p>
+        <p id="remarkText2"></p>
     </div>
 
     <div class="box">
@@ -99,10 +100,10 @@
 
     <div class="box">
         <div>
-            <label for="remarkInput">Enter Remark:</label>
-            <input type="text" id="remarkInput" onkeypress="handleKeyPress(event)">
+            <label for="remarkInput3">Enter Remark:</label>
+            <input type="text" id="remarkInput3" onkeypress="handleKeyPress(event)">
         </div>
-        <p id="remarkText"></p>
+        <p id="remarkText3"></p>
     </div>
 
     <script>
@@ -110,6 +111,24 @@
             if (event.key === 'Enter') {
                 const remarkInput = document.getElementById('remarkInput');
                 const remarkText = document.getElementById('remarkText');
+                remarkText.innerText = remarkInput.value;
+                remarkInput.value = '';
+            }
+            if (event.key === 'Enter') {
+                const remarkInput = document.getElementById('remarkInput1');
+                const remarkText = document.getElementById('remarkText1');
+                remarkText.innerText = remarkInput.value;
+                remarkInput.value = '';
+            }
+            if (event.key === 'Enter') {
+                const remarkInput = document.getElementById('remarkInput2');
+                const remarkText = document.getElementById('remarkText2');
+                remarkText.innerText = remarkInput.value;
+                remarkInput.value = '';
+            }
+            if (event.key === 'Enter') {
+                const remarkInput = document.getElementById('remarkInput3');
+                const remarkText = document.getElementById('remarkText3');
                 remarkText.innerText = remarkInput.value;
                 remarkInput.value = '';
             }
